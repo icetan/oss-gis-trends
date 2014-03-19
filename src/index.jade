@@ -3,66 +3,49 @@ html
   head
     meta(charset='utf-8')
     meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
-    title Pubkväll GIS-Väst
+    title Trender i Open Source GIS
 
     //- Check out 'src/bower_components/prism/themes/' for available themes
     link(rel='stylesheet', type='text/css', href='bower_components/prism/themes/prism-tomorrow.css')
 
     link(rel='stylesheet', type='text/css', href='styles/main.css')
     <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.css" />
- 
 
   body
-
     article
-
       section
-        h2 Pubkväll
-        h1 GIS-Väst
-        hr
-        table
-          tr
-            td Peter Thorin
-            td
-            td Per Liedman
-          tr
-            td <a href='http://twitter.com/pthorin' target='_blank'>@pthorin</a>
-            td
-            td <a href='http://twitter.com/liedman' target='_blank'>@liedman</a>
-        hr
-        p Slides finns på <a href='http://pthorin.github.io/pubgis2013'>http://pthorin.github.io/pubgis2013</a>
-
-      section
+        h2 Open Source GIS
         h1 Trender
+        p Christopher Fredén
+        p <a href='http://twitter.com/icetan' target='_blank'>@icetan</a>
+        p Slides finns på <a href='http://pthorin.github.io/pubgis2013'>http://icetan.github.io/oss-gis-trends</a>
+
       section
-        h1 Open Source vs Closed Source
-        ul
-          li
+        h2 Open Source vs Closed Source
+        ul.bullet
           li Closed source: Drivkraft att skapa stora system
-          li Open source: Drivkraft att skapa lösningar på specifika problem
+          li Open source: Drivkraft att skapa lösningar för specifika problem
+
       section
         h2 Professionell GIS
-        h4 (tung-GIS, desktop-GIS)
-        hr
+        h3 (tung-GIS, desktop-GIS)
         ul.bullet
           li ESRI
           li Mapinfo
           li QGIS
-        <img src="images/tung-gis.png" class="background"/>
+        <img src="images/tung-gis.jpg" class="background"/>
+
       section
-        <img src="images/consumer.png" class="background"/>
-        h1 Konsument-GIS
-        h4 (web-GIS, neo-GIS)
+        h2 Konsument-GIS
+        h3 (web-GIS, neo-GIS)
         hr
-        p
-          strong Vi tillhandahåller GIS i den moderna browsern
-        p Lika kraftfullt som desktop-GIS
+        p Vi tillhandahåller GIS i den moderna browsern
         ul.bullet
-          li
-            i
-              small (typ)
-          li
-            small (WebGL, Web Workers, Web Sockets, Web RTC, ...)
+          li Lika kraftfullt som desktop-GIS
+          li.footnote typ...
+          li.footnote WebGL, Web Workers, Web Sockets, Web RTC
+        <img src="images/consumer.png" class="background"/>
+
       section
         h2 Vad använder Kartena?
         table.logos
@@ -74,10 +57,11 @@ html
             td <img src="images/tilemill.png" height="120"/>
             td <img src="images/nodejs.png"/>
             td <img src="images/qgis.png" height="60"/>
-          tr 
+          tr
             td <img src='images/leaflet.png' />
             td <img src='images/gitscm.png' />
             td <img src='images/postgis.png' height='120' />
+
       section
         h3 Trend
         hr
@@ -86,73 +70,76 @@ html
         ul.bullet
           li ESRI börjar öppna upp (delvis)
           li QGIS web
+
       section
         h3 Trend
         hr
         h2 Konsument-GIS närmar sig professionell GIS
 
       section
-        h1 Javascript
-        p Node.js / npm
-        p Fokuserat
+        h2 JavaScript
+        p Node.js / NPM
+
       section
-        h1 Komponenter
-        ul
-          li Utvecklare skriver många projekt som löser specifika problem
-          br
-          li npm gör det lätt att installera och kombinera dessa projekt
-          br
-          br
-          br
-          br
-          li <small><em>Detta är inget nytt, det är en gammal UNIX-idé</em></small>
+        h2 Komponenter
+        ul.bullet
+          li Mindre funktionalitet per del, fler delar
+          li JavaScript minskar friktionen vid utvecklingen
+          li NPM hjälper till att hantera komponenter
+          li.footnote Detta är inget nytt, det är en gammal UNIX-idé
+
       section
         h1 Exempel
+
       section
         div#mapzor
           h1 <a href="http://leafletjs.com/"><img src="images/leaflet.png" width=440 alt="Leaflet"/></a>
-          ul
-            li Enkelhet*
+          ul.bullet
             li Färre funktioner istället för fler
-            li Plugin
+            li Plugin baserad arkitektur
+            li Enkelhet*
             li.footnote *jämfört med OpenLayers
         <div id="map" ></div>
+
       section
         <img src="images/projection.png" class="background"/>
         h1 <a href="https://github.com/kartena/proj4leaflet/">Proj4Leaflet</a>
         p Stöd för projektioner i Leaflet av Kartena
+
       section
-        h1 Andra plugin vi skrivit
+        h2 Andra plugin vi skrivit
         ul.bullet
           li <a href="https://github.com/kartena/leaflet-tilejson">Leaflet Tilejson</a> - lagerkonfiguration
           li <a href="https://github.com/kartena/Leaflet.zoomslider">Leaflet Zoomslider</a> - zoomslider
           li <a href="https://github.com/kartena/Leaflet.Pancontrol">Leaflet Pan control</a> - panoreringskontroll
           li <a href="https://github.com/kartena/Leaflet.EditableHandlers">Leaflet Editable handlers</a> - ritverktyg
+
       section
-        <img src="images/all-the-things.jpg" class="background"/>
-        h1 Open Source All the Things!
-        p
-          small hur vi jobbar med open source
-        hr
+        h2 Open Source All the Things!
+        h3 hur vi jobbar med open source
         ul.bullet
           li Tänk open source från början
           li Små komponenter
-          li
-            p
-              | Skippa storslagna visioner, börja smått
-              br
-              | (first make it work, then make it beautiful)
+          li Håll det enkelt
+          li Integration är nyckeln
           li Mycket är användbart även om det inte är perfekt
+        <img src="images/all-the-things.jpg" class="background"/>
+
       section
         h1 Demo
+
       section
         h1 <a href='http://geojson.io' target='_blank'>geojson.io</a>
+
       section
         h1 <a href='http://www.liedman.net/gis-nerd-tools/' target='_blank'>GIS Nerd Tools</a>
+
       section
         h1 <a href='http://openstreetmap.org' target='_blank'>OpenStreetMap</a>
+
       section
         h1  <a href='http://d3js.org' target='_blank'>d3js - Data Driven Documents</a>
+
       section
         code.language-bash
           pre.
@@ -160,29 +147,17 @@ html
             > echo "POINT(6399451 319802)" | wellknown |
               reproject --reverse --sr --from epsg:3006 --to epsg:4326 |
               geojsonio
+
       section
         h1 Inspiration
         <a href='http://chelm.github.io/foss4g2013-geo-javascript/' target='_blank'>http://chelm.github.io/foss4g2013-geo-javascript/</a>
-      section
-        <img src="images/cheers.gif" class="background"/>
-        h1 Tack!
-        br
-        br
-        br
-        br
-        hr
-        table
-          tr
-            td Peter Thorin
-            td
-            td Per Liedman
-          tr
-            td <a href='http://twitter.com/pthorin' target='_blank'>@pthorin</a>
-            td
-            td <a href='http://twitter.com/liedman' target='_blank'>@liedman</a>
-        hr
-        p <a href='http://pthorin.github.io/pubgis2013'>http://pthorin.github.io/pubgis2013</a>
 
+      section
+        h1 Tack!
+        p Christopher Fredén
+        p <a href='http://twitter.com/icetan' target='_blank'>@icetan</a>
+        p <a href='http://pthorin.github.io/pubgis2013'>http://icetan.github.io/oss-gis-trends</a>
+        <img src="images/cheers.gif" class="background"/>
 
       //  section
       //    h2 Syntax Highlighting
@@ -226,4 +201,3 @@ html
     script(src='scripts/leaflet-tilejson.js')
     script(src='http://api.geosition.com/tile-meta/lm.jsonp?jsonp=lmvTileJson%3d')
     script(src='scripts/main.js')
-
